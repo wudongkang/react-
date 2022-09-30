@@ -1,6 +1,8 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# 一个简单的后台管理系统
+
+react + ant + redux + axios等
 
 ## Available Scripts
 
