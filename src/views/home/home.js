@@ -112,6 +112,7 @@ const Home = () => {
     // 由于画布扩大，canvas 的坐标系也跟着扩大，如果按照原先的坐标系绘图内容会缩小，所以需要将绘制比例放大
     ctx.scale(dpr,dpr);
   }
+
   const initdrawer = ()=>{
     const drawer = new Drawer('#drawer');
     // 创建几何图形

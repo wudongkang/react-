@@ -1,7 +1,7 @@
 import App from '../App'
-import Login from '@/views/login/login.js'
+import Login from '@/views/login/Login.js'
 // import Home from '@/views/home/home.js'
-import nav from '@/views/nav/nav.js'
+import nav from '@/views/nav/Nav.js'
 import ShoppingList from '@/views/ShoppingList/ShoppingList';
 // import nav1 from '@/views/nav/nav1/nav1'
 import {
@@ -11,7 +11,7 @@ import {
 } from '@ant-design/icons';
 
 // --------------------------------------- 先看备注撒
-// 备注！！！！！  父子组件前缀必须同意，比如，path：/guan (父组件) 子组件path 必须为：/guan/（子组件名称）
+// 备注！！！！！  父子组件前缀必须统一，比如，path：/guan (父组件) 子组件path 必须为：/guan/（子组件名称）
 // path 跳转地址
 // name 菜单的名字
 // icon 菜单前缀图标 基于ant designui框架,

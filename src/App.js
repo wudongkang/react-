@@ -27,7 +27,6 @@ const App = () => {
   }
   const quit = () =>{
     navigate('/login')
-    // alert(1)
   }
 
   // const routeRender = () => {

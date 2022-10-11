@@ -1,27 +1,40 @@
-import React, {useEffect, useRef }  from 'react';
-// import * as THREE from 'three';
+import React, { useEffect }  from 'react';
+import { useNavigate } from 'react-router-dom';
 import Particle from 'zhihu-particle';
 import './login.scss'
 import { Button, Checkbox, Form, Input } from 'antd';
+// import * as THREE from 'three';
 
 const Login = () => {
   // const CanvasRef = useRef();
-  const onFinish = (values) => {
-    console.log('Success:', values);
-  };
+  const navigates = useNavigate()
+  const zhanghao = {
+    Username:'kk',
+    Password:'123'
+  }
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
+  const onFinish = (values) => {
+    console.log('Success:', values);
+    if (values.Username === zhanghao.Username && values.Password === zhanghao.Password) {
+      alert('登陆成功')
+      navigates('/')
+    }else{
+      alert('密码不正确')
+    }
+  };
+
   useEffect(()=>{
     new Particle(document.getElementById('canvas-wrapper'),{
-      // atomColor:"red",   // 粒子颜色
+      atomColor: "#cccccc",   // 粒子颜色
       interactive: true,  //是否可以点击
-      density: 20000, // 粒子密度，1000-50000  越低例子越多，
+      density: 30000, // 粒子密度，1000-50000  越低例子越多，
       velocity: 'fast'
     });
 
-  })
+  },[])
 
   // useEffect(()=>{
   //   // --------- 场景 ---------
@@ -80,18 +93,16 @@ const Login = () => {
 
   //   /** 将渲染器的输出添加到html元素 */
   //   CanvasRef.current.appendChild(renderer.domElement);
-
-  //   return () =>{
-  //   }
-
+  //   return () =>{}
   // },[])
 
   return <div style={{width:'100%',height:'99%'}} id='canvas-wrapper' >
-    {/* <div ref={CanvasRef}></div> */}
     <div className='login_form' >
-      <h1>
-        后台管理系统
-      </h1>
+      <h1>后台管理系统</h1>
+      {/* <div style={{
+        width:'200px',
+        height:'200px',
+      }} ref={CanvasRef}></div> */}
       <Form
         name="basic"
         labelCol={{ span: 8 }}
@@ -103,7 +114,7 @@ const Login = () => {
       >
         <Form.Item
           label="Username"
-          name="username"
+          name="Username"
           rules={[{ required: true, message: 'Please input your username!' }]}
         >
           <Input />
@@ -111,19 +122,19 @@ const Login = () => {
 
         <Form.Item
           label="Password"
-          name="password"
+          name="Password"
           rules={[{ required: true, message: 'Please input your password!' }]}
         >
-          <Input.Password />
+          <Input.Password/>
         </Form.Item>
 
         <Form.Item name="remember" valuePropName="checked" wrapperCol={{ offset: 8, span: 16 }}>
-          <Checkbox>Remember me</Checkbox>
+          <Checkbox>please Remember me</Checkbox>
         </Form.Item>
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
           <Button type="primary" htmlType="submit">
-            Submit
+            登陆
           </Button>
         </Form.Item>
       </Form>
