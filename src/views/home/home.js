@@ -155,15 +155,7 @@ const Home = () => {
         </Col>
         <Col className="gutter-row" span={12}>
           <Divider orientation="left">Horizontal</Divider>
-
         </Col>
-
-        {/* <Col className="gutter-row" span={6}>
-          <div style={style}>col-6</div>
-        </Col>
-        <Col className="gutter-row" span={6}>
-          <div style={style}>col-6</div>
-        </Col> */}
       </Row>
     </>
   )

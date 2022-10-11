@@ -19,6 +19,11 @@ import {
 // childRoutes 子路由
 
 const routeConfig = [
+   { path: 'login',
+    component: Login,
+    name:'登陆页（后续要隐藏）',
+    showMenu:true
+  },
   {
     path: '/',
     component: App,

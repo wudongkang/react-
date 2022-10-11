@@ -33,7 +33,6 @@ const Login = () => {
       density: 30000, // 粒子密度，1000-50000  越低例子越多，
       velocity: 'fast'
     });
-
   },[])
 
   // useEffect(()=>{
