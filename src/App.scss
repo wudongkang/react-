@@ -57,3 +57,16 @@ body{
 .ant-layout{
   height: 100%;
 }
+.ant-layout-sider{
+  .quit{
+    position: absolute;
+    bottom: 10px;
+    padding: 0 10%;
+    width: 100%;
+    .ant-btn{
+      width: 100%;
+      color: red;
+    }
+  }
+
+}

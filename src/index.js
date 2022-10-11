@@ -26,13 +26,13 @@ root.render(
   // <HashRouter>
   // </HashRouter>
   // BrowserRouter 监听 window 的 popstate 事件来实现的
-  <React.StrictMode>
+  // <React.StrictMode>
     <BrowserRouter>
         <Routes>
           {drawing(routeConfig)}
         </Routes>
     </BrowserRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // 如果你想开始在你的应用程序中测量性能，打开下面这段代码。不懂怎么用的可以度娘一波，so easy

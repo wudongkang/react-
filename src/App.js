@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Outlet, useLocation} from 'react-router-dom';
-import { Layout, Breadcrumb} from 'antd';
+import { Outlet, useLocation, useNavigate} from 'react-router-dom';
+import { Layout, Breadcrumb, Button} from 'antd';
 // import routeConfig from '@/router/index';
 import {
   MenuFoldOutlined,
@@ -9,14 +9,14 @@ import {
 import '@/App.scss';
 import Home from '@/views/home/home'
 import Menus from '@/component/menu/menu'
-// import { foreachTree } from '@/utils/useInterval';
 const { Header, Sider, Content } = Layout;
 
 const App = () => {
+  const navigate = useNavigate()
+  const Location = useLocation()
   const [collapsed, setCollapsed] = useState(false);
   // const [routerValue, setrouterValue] = useState();
   // let BreadcrumbList = [];
-  const Location = useLocation()
   // 通过路由判断当前显示什么组件，home 还是 outlet
   const isHome = () => {
     if (Location.pathname === '/') {
@@ -24,6 +24,10 @@ const App = () => {
     }else{
       return <Outlet></Outlet>
     }
+  }
+  const quit = () =>{
+    navigate('/login')
+    // alert(1)
   }
 
   // const routeRender = () => {
@@ -53,6 +57,9 @@ const App = () => {
           <p className="App-logo"/>
         </div>
         <Menus></Menus>
+        <div className='quit'>
+          <Button onClick={quit}>退出</Button>
+        </div>
       </Sider>
       <Layout className="site-layout">
         <Header

@@ -1,5 +1,5 @@
 import App from '../App'
-import login from '@/views/login/login.js'
+import Login from '@/views/login/login.js'
 // import Home from '@/views/home/home.js'
 import nav from '@/views/nav/nav.js'
 import ShoppingList from '@/views/ShoppingList/ShoppingList';
@@ -68,7 +68,7 @@ const routeConfig = [
   //   ]
   // },
   { path: 'login',
-    component: login,
+    component: Login,
     name:'登陆页（后续要隐藏）',
     showMenu:true
   }
